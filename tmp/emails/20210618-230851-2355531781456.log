@@ -1,0 +1,11 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Subject: Account verify
+From: django@gb.local
+To: robert8@mail.ru
+Date: Fri, 18 Jun 2021 18:08:51 -0000
+Message-ID: <162403973178.16420.201415177723472571@DESKTOP-9RRJLJU>
+
+Your link for account activator: http://localhost:8888/auth/verify/robert8@mail.ru/14bfe0da28f5fc66e33973308fcbe3797f6d4b01/
+-------------------------------------------------------------------------------
