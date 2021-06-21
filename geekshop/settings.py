@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'mainapp',
     'authapp',
     'basketapp',
-    'adminapp'
+    'adminapp',
+    'social_django'
 ]
 
 MIDDLEWARE = [
@@ -132,7 +133,7 @@ LOGIN_URL = '/auth/login/'
 
 EMAIL_HOST = 'localhost'
 EMAIL_PORT = 25
-EMAIL_HOST_USER = 'django@gb.local'
+EMAIL_HOST_USER = 'django@geekshop.local'
 EMAIL_HOST_PASSWORD = 'geekbrains'
 EMAIL_USE_SSL = False
 
@@ -142,3 +143,10 @@ EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = 'tmp/emails/'
 
 DOMAIN_NAME = 'http://localhost:8888'
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'social_core.backends.vk.VKOAuth2'
+)
+SOCIAL_AUTH_VK_OAUTH2_KEY = '7884516'
+SOCIAL_AUTH_VK_OAUTH2_SECRET = 'J04VlYu03rn7nCaWSXIc'
