@@ -142,7 +142,7 @@ EMAIL_USE_SSL = False
 EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
 EMAIL_FILE_PATH = 'tmp/emails/'
 
-DOMAIN_NAME = 'http://localhost:8888'
+DOMAIN_NAME = 'http://localhost:8000'
 
 AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
