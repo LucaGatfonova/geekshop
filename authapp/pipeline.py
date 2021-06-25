@@ -14,7 +14,7 @@ def save_user_profile(backend, user, response, *args, **kwargs):
 
     vk_response = requests.get(api_url)
 
-    if vk_response.status_code !=200:
+    if vk_response.status_code != 200:
         return
 
     vk_data = vk_response.json()['response'][0]
@@ -30,7 +30,7 @@ def save_user_profile(backend, user, response, *args, **kwargs):
 
         if vk_data['bdata']:
             b_data = datetime.strptime(vk_data['bdata'], '%d.%m.%Y').date()
-            age =timezone.now().date().year - b_data.year
+            age = timezone.now().date().year - b_data.year
             if age < 18:
                 user.delete()
                 raise AuthForbidden('social_core.backends.vk.VKOAuth2')
