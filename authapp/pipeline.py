@@ -7,7 +7,7 @@ from authapp.models import ShopUserProfile
 
 
 def save_user_profile(backend, user, response, *args, **kwargs):
-    if backend != 'vk-oauth2':
+    if backend.name != 'vk-oauth2':
         return
 
     params = f"fields=bdate,sex,about,photo_max_orig&v=5.131&access_token={response['access_token']}"
