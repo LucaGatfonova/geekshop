@@ -1,0 +1,117 @@
+    1  apt update
+    2  apt install nginx
+    3  y
+    4  yes
+    5  ssh-keygen
+    6  cat /root/.ssh/
+    7  cat /root/.ssh/id_rsa.pub
+    8  apt install mc
+    9  mc
+   10  4
+   11  apt instaii postgresql postgresql-contrib
+   12  apt install postgresql postgresql-contrib
+   13  apt install python-venv
+   14  apt install python3-venv
+   15  apt install git
+   16  mcedit /etc/postgresql/12/main/pg_hba.conf
+   17  systemctl restart postgresql
+   18  system status postgresql
+   19  systemctl restart postgresql
+   20  systemctl status postgresql
+   21  useradd -g www-data -m django
+   22  cd /home/djang/
+   23  cd /home/django/
+   24  git clone git@github.com:LucaGatfanova/geekshop.git
+   25  git clone git@github.com:LucaGatfÐ¾nova/geekshop.git
+   26  git clone git@github.com:LucaGatfonova/geekshop.git
+   27  ls -la
+   28  python3 -m venv env
+   29  source env/bin/activate
+   30  deactivate
+   31  cd geekshop/
+   32  python3 -m venv env
+   33  source env/bin/activate
+   34  pip3 install -r requirements.txt
+   35  pip3 install wheel
+   36  pip3 install gunicorn
+   37  psql -U postgres
+   38  python3 manage.py migrate
+   39  python manage.py migrate
+   40  python3 manage.py migrate
+   41  source env/bin/activate
+   42  cd /home/django/
+   43  source env/bin/activate
+   44  python3 manage.py migrate
+   45  cd geekshop/
+   46  source env/bin/activate
+   47  python3 manage.py migrate
+   48  ‰¾cd geekshop
+   49  cd geekshop/
+   50  mcedit /home/django/geekshop/geekshop/settings.py
+   51  python3 manage.py migrate
+   52  python3 manage.py fill_db
+   53  pip install psycopg
+   54  pip install python-psycopg2
+   55  pip install psycopg2
+   56  import psycopg2
+   57  pip import psycopg2
+   58  python3 manage.py migrate
+   59  pip install psycopg2-binary 
+   60  pip install psycopg2
+   61  python3 manage.py migrate
+   62  python3 manage.py fill_db
+   63  git pull
+   64  cd /home/django/geekshop/geekshop/settings.py
+   65  mcedit /home/django/geekshop/geekshop/settings.py
+   66  git pull
+   67  mcedit /home/django/geekshop/geekshop/settings.py
+   68  python3 manage.py fill_db
+   69  python3 manage.py runserver
+   70  python3 manage.py runserver  0.0.0.0:8000
+   71  python3 manage.py migrate
+   72  python3 manage.py runserver  0.0.0.0:8000
+   73  mcedit /etc/systemd/system/gunicorn.service/e
+   74  mcedit /etc/systemd/system/gunicorn.service
+   75  sudo systemctl enable gunicorn
+   76  sudo systemctl start gunicorn
+   77  sudo systemctl status gunicorn
+   78  chown -R django /home/django/
+   79  systemctl start gunicorn
+   80  sudo systemctl status gunicorn
+   81  nginx
+   82  cd /home/django/geekshop/
+   83  source env/bin/activate
+   84  mcedit /etc/nginx/sites-available/geekshop
+   85  systemctl enable gunicorn
+   86  systemctl start gunicorn
+   87  systemctl status gunicorn
+   88  mcedit /etc/nginx/sites-available/geekshop
+   89  sudo nano /etc/nginx/sites-available/geekshop
+   90  cd /home/django/geekshop/
+   91  source env/bin/activate
+   92  sudo systemctl enable gunicorn
+   93  sudo systemctl start gunicorn
+   94  sudo systemctl status gunicorn
+   95  sudo nano /etc/nginx/sites-available/geekshop
+   96  python3 manage.py runserver 0.0.0.0:8000
+   97  chmod -R 755 /home/django/geekshop/
+   98  sudo nano /etc/systemd/system/gunicorn.service
+   99  sudo systemctl status gunicorn
+  100  sudo nano /etc/nginx/sites-available/geekshop
+  101  cd /etc/
+  102  cd /nginx/
+  103  cd /home/django/geekshop
+  104  apt install nginx
+  105  sudo nano /etc/nginx/sites-available/geekshop
+  106  sudo ln -s /etc/nginx/sites-available/geekshop /etc/nginx/sites-enabled
+  107  mc
+  108  sudo nginx -t
+  109  sudo systemctl restart nginx
+  110  tail -f /var/log/nginx/error.log
+  111  sudo systemctl status gunicorn
+  112  
+  113  systemctl restart gunicorn
+  114  systemctl status gunicorn
+  115  cd /home/django/geekshop/
+  116  source env/bin/activate
+  117  history > /tmp/1.txt
