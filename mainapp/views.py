@@ -13,6 +13,13 @@ def load_from_json(file_name):
         return json.load(infile)
 
 
+def get_basket(user):
+    if user.is_authenticated:
+        return Basket.objects.filter(user=user)
+    else:
+        return []
+
+
 def get_hot_product():
     products = Product.objects.filter(is_active=True, category__is_active=True)
 
@@ -28,7 +35,7 @@ def get_same_products(hot_product):
 def main(request):
     title = 'главная'
 
-    #products = Product.objects.filter(is_active=True, category__is_active=True)[:3]
+    # products = Product.objects.filter(is_active=True, category__is_active=True)[:3]
     products = Product.objects.filter(is_active=True, category__is_active=True).select_related('category')[:3]
 
     content = {
@@ -37,7 +44,6 @@ def main(request):
     }
 
     return render(request, 'mainapp/index.html', content)
-
 
 
 def products(request, pk=None, page=1):
