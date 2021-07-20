@@ -22,6 +22,18 @@ def get_links_menu():
         return ProductCategory.objects.filter(is_active=True)
 
 
+def get_product(pk):
+    if settings.LOW_CACHE:
+        key = f'product_{pk}'
+        product = cache.get(key)
+        if product is None:
+            product = get_object_or_404(Product, pk=pk)
+            cache.set(key, product)
+        return product
+    else:
+        return get_object_or_404(Product, pk=pk)
+
+
 def load_from_json(file_name):
     with open(os.path.join(JSON_PATH, file_name + '.json'), 'r') as infile:
         return json.load(infile)
@@ -112,7 +124,8 @@ def product(request, pk):
     title = 'продукты'
     # links_menu = ProductCategory.objects.filter(is_active=True)
 
-    product = get_object_or_404(Product, pk=pk)
+    # product = get_object_or_404(Product, pk=pk)
+    product = get_product(pk)
 
     content = {
         'title': title,
