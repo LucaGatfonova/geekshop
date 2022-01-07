@@ -3,7 +3,7 @@
 import adminapp.views as adminapp
 from django.urls import re_path
 
-app_name="adminapp"
+app_name = "adminapp"
 
 urlpatterns = [
     re_path(r'^users/create/$', adminapp.user_create, name='user_create'),
